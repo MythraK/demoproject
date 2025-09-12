@@ -1,0 +1,63 @@
+vigation
+
+cd ~---->it will take u to ur personal dir(/home/mythra)
+then we can touch the file, if we are in home dir then we cannot touch the file
+
+
+
+pwd----->shows present working directory
+ls------>lists all the  files and folders
+ls -l---->detailed listing of files(permission,size,date)
+ls -a----->show all hidden files
+
+
+Folder and Folder Management
+
+mkdir foldername--->create a new folder
+cd foldername------>go inside that particular folder
+cd ..------>go back
+rmdir foldername--->delete or remove folder
+touch filename.txt---->create a new empty file
+
+[to add content to the file when we don't have editor, here is the steps to do that]
+echo "Hello,this is my first line" >filename.txt---->create new file with some content
+echo "This is a second line" >>filename.txt--------->append more content later
+cat filename.txt--------> view the file content
+
+cp file1.txt file2.txt---->copy file
+
+mv command we can preform two operations
+mv ex1.txt ex2.txt----->here ex1 file will be renamed as exe2
+mv oldfolder newfolder--->rename folder
+
+mv example1.txt Documents/----->here example1.txt file will be moved to documents folder
+mv apple.txt mango.txt backup/---->apple and mango file will be moved into backup folder
+
+rm filename.txt----->delete file
+rm file1.txt file2.txt file3.txt----->delete the specified files(multiple file deletion)
+rm -i filename.txt---->deletes with confirmation
+rm *.txt---->remove all files in a folder
+rm -r foldername/---->deletes the folder and everything inside it
+rm -ri foldername---->confirmation before deleting
+
+Viewing files
+
+less filename.txt----->view page by page
+head filename.txt----->show first 10 lines
+head -n 20 filename.txt---->shows first 20 lines
+tail filename.txt----->show last 10 lines
+
+Search and replace commands
+
+% → means "do this for the whole file"
+s → substitute (replace)
+^ → special regex = "the beginning of each line"
+$--->end of each line
+msncj → the text you want to add
+g → do it globally (all matches, but here ^ matches only once per line anyway)
+
+:%s/^/random content/g----->add content at at the beginning
+:%s/^/           /g------------>add blankspaces
+:%s/$/          /g----------->add spaces at the end of the line
+:%s/old/new/g-------> replace old by new
+:6,10s/^/        /g----->space for only particular lines
